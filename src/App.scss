@@ -105,6 +105,10 @@ body {
 	margin-left: 300px;
 	&__tabs {
 		padding: 40px 16px;
+		@media (max-width: $br-tabs) {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 	&__tabs-title {
 		text-align: center;
@@ -559,16 +563,19 @@ body {
 		@media (max-width: $br-tabs) {
 			flex-wrap: nowrap;
 			justify-content: flex-start;
-			column-gap: 16px;
+			column-gap: 0;
 			overflow: scroll;
 		    -ms-overflow-style: none;
 		    scrollbar-width: none; 
 		    &::-webkit-scrollbar {
 		        display: none;
 		    }
+		    padding-left: 16px;
+		    padding-right: 16px;
 		}
 	}
 	&__tab {
+		width: 150px;
 		min-width: 150px;
 		display: flex;
 		flex-direction: column;
@@ -584,10 +591,22 @@ body {
 		&:hover {
 			background-color: $c-accent-opacity;
 		}
+
+		@media (max-width: $br-tabs) {
+			border-radius: 0;
+			background-color: #F7F7F7;
+			&:first-child {
+				border-radius: 10px 0 0 10px;
+			}
+			&:last-child {
+				border-radius: 0px 10px 10px 0;
+			}
+		}
 		&.tabs__tab_active {
 			color: $c-accent;
 			background-color: $c-accent-opacity;
 		}
+
 		transition: background-color 0.09s ease, color 0.09s ease;
 	}
 	&__icon {
