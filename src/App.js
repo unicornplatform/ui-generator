@@ -7,6 +7,8 @@ import './App.scss'
 import Sidebar from './Sidebar'
 import Main from './Main'
 
+
+
 class App extends Component {
 		//localhost:3000/?type=0&category=0&dark=0&mockup=0&color=0
 		
@@ -43,6 +45,7 @@ class App extends Component {
 					parsed.color==7
 				) ? parseInt(parsed.color) : 0
 			),
+			imageIsLoading: false,
 		}
 	}
 	
@@ -76,6 +79,22 @@ class App extends Component {
 		})
 	}
 
+	startLoading = () => {
+		if (this.state.imageIsLoading != true)
+		{
+				this.setState({
+					imageIsLoading: true,
+			})
+		}
+	}
+
+	addClass = () => {
+		document.querySelector('.spinner').classList.add("js-hidden")
+	}
+
+
+
+
 	render() {
 
 		return (
@@ -91,6 +110,9 @@ class App extends Component {
 					dark={this.state.dark}
 					mockup={this.state.mockup}
 					color={this.state.color}
+
+					addClass={this.addClass}
+
 				/>
 				<Main 
 					setType={this.setType}

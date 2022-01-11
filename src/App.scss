@@ -99,6 +99,9 @@ body {
 .js-lock {
 	overflow: hidden;
 }
+.js-hidden {
+	visibility: hidden;
+}
 
 .main {
 	flex-grow: 1;
@@ -124,9 +127,13 @@ body {
 		align-items: center;
 		justify-content: center;
 		row-gap: 40px;
+		@media (max-width: $br-desktop) {
+			padding: 48px;
+		}
 		@media (max-width: $br-mobile) {
-			padding-left: 16px;
-			padding-right: 16px;
+			padding: 32px 16px;
+			// padding-left: 16px;
+			// padding-right: 16px;
 		}
 	}
 	&__type {
@@ -143,6 +150,10 @@ body {
 			padding-left: 16px;
 			padding-right: 16px;
 		}
+		@media (max-width: $br-desktop) {
+			padding-bottom: 0;
+			padding-top: 32px;
+		}
 
 	}
 	&__customize {
@@ -154,6 +165,7 @@ body {
 		align-items: center;
 		row-gap: 40px;
 		@media (max-width: $br-mobile) {
+			padding: 48px 16px 32px;
 			padding-left: 16px;
 			padding-right: 16px;
 		}
@@ -204,8 +216,9 @@ body {
 			padding-right: 16px;
 		}
 	}
-	&__footer {
-		
+	&__footer {}
+	&__title-container {
+		position: relative;
 	}
 	@media (max-width: $br-tabs) {
 		max-width: 100%;
@@ -791,9 +804,71 @@ body {
 
 
 
+.spinner {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: -12px;
+  right: -64px;
+  @media (max-width: $br-mobile) {
+  	width: 48px;
+  	height: 48px;
+  	top: -12px;
+  	right: -50px;
+  }
+}
 
+.spinner svg {
+  animation: rotate 0.7s linear infinite;
+  height: 100%;
+  width: 100%;
+}
 
+.spinner circle {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  animation: 
+    dash 1.5s ease-in-out infinite 0s, 
+    color 6s ease-in-out infinite -0.75s;
+  stroke-linecap: round;
+  fill: none;
+  stroke-width:4;
+}
 
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+  }
+}
+@keyframes color {
+  100%, 0% {
+    stroke: #4285F4;
+  }
+  25% {
+    stroke: #DE3E35;
+  }
+  50% {
+    stroke: #F7C223;
+  }
+  75% {
+    stroke: #1DA760;
+  }
+}
 
 
 

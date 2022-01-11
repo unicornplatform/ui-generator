@@ -21,6 +21,7 @@ class Sidebar extends Component {
 								<Switch 
 								setType = {this.props.setType}
 								type={this.props.type}
+								addClass={this.props.addClass}
 								/>
 							</div>
 

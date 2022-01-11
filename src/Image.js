@@ -2,6 +2,9 @@ import React, {Component} from 'react'
 
 class Image extends Component {
 	src = ""
+	check = () => {
+		console.log("Loaded")
+	}
 	render() {
 		this.src = ""
 		this.src = this.src + 
@@ -14,6 +17,7 @@ class Image extends Component {
 		className = {`main__result-image result-image ` + `${this.props.mockup ? "no-shadow" : ""}`}
 		src={`./ui/${this.src}.png`} 
 		alt="" 
+		onLoad={() => this.check()}
 		/>
 	}
 }

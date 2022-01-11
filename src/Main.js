@@ -8,6 +8,7 @@ import Toggle from './Toggle'
 import Picker from './Picker'
 import Testimonial from './Testimonial'
 import Footer from './Footer'
+import Spinner from './Spinner'
 
 
 class Main extends Component {
@@ -15,7 +16,6 @@ class Main extends Component {
 		return (
 			<div className='main'>
 				<Navigation />
-
 				<div className="main__type mobile-only">
 					<h2 className="main__type-title h2-title">Select UI type</h2>
 					<Switch 
@@ -25,7 +25,7 @@ class Main extends Component {
 				</div>
 
 				<div className="main__tabs">
-					<h2 className="main__tabs-title h2-title">Choose a category</h2>
+					<h2 className="main__tabs-title h2-title desktop-only">Choose a category</h2>
 					<Tabs 
 					setCategory={this.props.setCategory}
 					type={this.props.type}
@@ -34,7 +34,10 @@ class Main extends Component {
 				</div>
 
 				<div className="main__result">
-					<h2 className="main__result-title h2-title">Result</h2>
+					<div className="main__title-container">
+						<h2 className="main__result-title h2-title">Result</h2>
+						<Spinner isActive = {false} />
+					</div>
 					<Image 
 					type={this.props.type}
 					category={this.props.category}

@@ -1,15 +1,5 @@
 import React, {Component} from 'react'
 
-// const SwitchButton = function(arg) {
-// 	return <button 
-// 	onClick={
-// 		() => {arg.changeValue(arg.i)}
-// 	} 
-// 	className={"switch__button " + ((arg.selected == arg.i) ? "switch__button_selected " : "")}
-// 	>
-// 	{(arg.children || "Desktop")}
-// 	</button>
-// }
 class SwitchButton extends Component {
 	render() {
 		console.log()
@@ -39,6 +29,8 @@ class Switch extends Component {
 		const url = new URL(window.location);
 		url.searchParams.set('type', newValue);
 		window.history.pushState(null, '', url.toString());
+
+		this.props.addClass();
 	}
 
 	render() { 
