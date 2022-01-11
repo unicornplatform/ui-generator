@@ -29,8 +29,6 @@ class Switch extends Component {
 		const url = new URL(window.location);
 		url.searchParams.set('type', newValue);
 		window.history.pushState(null, '', url.toString());
-
-		this.props.addClass();
 	}
 
 	render() { 

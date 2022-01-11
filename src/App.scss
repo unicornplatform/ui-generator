@@ -220,6 +220,11 @@ body {
 	&__title-container {
 		position: relative;
 	}
+	&__result-title {
+		&.js-is-loading {
+			opacity: 0.5;
+		}
+	}
 	@media (max-width: $br-tabs) {
 		max-width: 100%;
 	}
@@ -815,6 +820,10 @@ body {
   	height: 48px;
   	top: -12px;
   	right: -50px;
+  }
+  visibility: hidden;
+  &.js-is-active {
+  	visibility: visible;
   }
 }
 

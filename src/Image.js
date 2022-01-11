@@ -2,9 +2,36 @@ import React, {Component} from 'react'
 
 class Image extends Component {
 	src = ""
-	check = () => {
-		console.log("Loaded")
+	startLoad = () => {
+		this.props.startLoading()
 	}
+	finishLoad = () => {
+		this.props.finishLoading()
+	}
+
+	componentDidUpdate(prevProps) {
+  // Typical usage (don't forget to compare props):
+  if (this.props.category !== prevProps.category) {
+    this.startLoad()
+  }
+
+  if (this.props.type !== prevProps.type) {
+    this.startLoad()
+  }
+
+  if (this.props.color !== prevProps.color) {
+    this.startLoad()
+  }
+
+  if (this.props.dark !== prevProps.dark) {
+    this.startLoad()
+  }
+
+  if (this.props.mockup !== prevProps.mockup) {
+    this.startLoad()
+  }
+}
+	
 	render() {
 		this.src = ""
 		this.src = this.src + 
@@ -17,7 +44,7 @@ class Image extends Component {
 		className = {`main__result-image result-image ` + `${this.props.mockup ? "no-shadow" : ""}`}
 		src={`./ui/${this.src}.png`} 
 		alt="" 
-		onLoad={() => this.check()}
+		onLoad={() => this.finishLoad()}
 		/>
 	}
 }

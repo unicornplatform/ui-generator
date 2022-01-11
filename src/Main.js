@@ -35,8 +35,8 @@ class Main extends Component {
 
 				<div className="main__result">
 					<div className="main__title-container">
-						<h2 className="main__result-title h2-title">Result</h2>
-						<Spinner isActive = {false} />
+						<h2 className="main__result-title h2-title js-result-title">Result</h2>
+						<Spinner />
 					</div>
 					<Image 
 					type={this.props.type}
@@ -44,6 +44,8 @@ class Main extends Component {
 					dark={this.props.dark}
 					mockup={this.props.mockup}
 					color={this.props.color}
+					startLoading={this.props.startLoading}
+					finishLoading={this.props.finishLoading}
 					/>
 					<Button buttonType="primary" icon htmlTag="button"
 					type={this.props.type}

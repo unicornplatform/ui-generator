@@ -80,16 +80,12 @@ class App extends Component {
 	}
 
 	startLoading = () => {
-		if (this.state.imageIsLoading != true)
-		{
-				this.setState({
-					imageIsLoading: true,
-			})
-		}
+		document.querySelector('.js-spinner').classList.add("js-is-active")
+		document.querySelector('.js-result-title').classList.add("js-is-loading")
 	}
-
-	addClass = () => {
-		document.querySelector('.spinner').classList.add("js-hidden")
+	finishLoading = () => {
+		document.querySelector('.js-spinner').classList.remove("js-is-active")
+		document.querySelector('.js-result-title').classList.remove("js-is-loading")
 	}
 
 
@@ -111,7 +107,7 @@ class App extends Component {
 					mockup={this.state.mockup}
 					color={this.state.color}
 
-					addClass={this.addClass}
+					
 
 				/>
 				<Main 
@@ -127,6 +123,9 @@ class App extends Component {
 					mockup={this.state.mockup}
 					color={this.state.color}
 					setCategory={this.setCategory}
+
+					startLoading={this.startLoading}
+					finishLoading={this.finishLoading}
 				/>
 			</div>
 		)
