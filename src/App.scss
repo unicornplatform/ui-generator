@@ -647,18 +647,22 @@ body {
 .result-image {
 	max-width: 100%;
 	max-height: 524px;
-	box-shadow: 0px 0px 2.2138051986694336px 0px #252C6104, 
+
+	&.has-shadow {
+			box-shadow: 0px 0px 2.2138051986694336px 0px #252C6104, 
 	0px 0px 5.32008171081543px 0px #252C6105, 
 	0px 0px 10.017241477966309px 0px #252C6106,
 	0px 0px 17.869047164916992px 0px #252C6108,
 	0px 0px 33.422088623046875px 0px #252C6109,
 	0px 0px 80px 0px #252C610D;
+	}
+
 	user-select: none;
 }
 
-.no-shadow {
-	box-shadow: none;
-}
+// .no-shadow {
+// 	box-shadow: none;
+// }
 
 .burger {
 	width: 24px;
