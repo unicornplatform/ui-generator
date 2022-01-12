@@ -53,6 +53,7 @@ class Main extends Component {
 					dark={this.props.dark}
 					mockup={this.props.mockup}
 					color={this.props.color}
+					className="button_download"
 					>
 					Download .png
 					</Button>
@@ -105,13 +106,13 @@ class Main extends Component {
 					</div>
 					<div className="main__about about">
 						<div className="about__textarea">
-						<div className="about__large-text">UI Generator was brought to you by <a className="link" href="https://unicornplatform.com" target="_blank">Unicorn&nbsp;Platform</a> 😎</div>
+						<div className="about__large-text">UI Generator was brought to you by <a className="link" href="https://unicornplatform.com?ref=ui" target="_blank">Unicorn&nbsp;Platform</a> 😎</div>
 							<div className="about__small-text">
 							<p>Unicorn Platform is a simple landing page builder. It is a tool for busy startup founders and marketeers.</p>
 							<p>Sign up and join <b>16,448</b> makers.</p>
 							</div>
 						</div>
-						<Button className="about__button" htmlTag="a" buttonType="ghost" href="https://unicornplatform.com" target = "_blank">Try Unicorn Platform for free</Button>
+						<Button className="about__button" htmlTag="a" buttonType="ghost" href="https://unicornplatform.com?ref=ui" target = "_blank">Try Unicorn Platform for free</Button>
 						{/*<span className="about__info info">Create 1 free website. No credit card required.</span>*/}
 					</div>
 					<div className="main__testimonials testimonials">
