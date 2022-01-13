@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ui-generator/static/css/main.01024420.css",
-    "main.js": "/ui-generator/static/js/main.10d1fb90.js",
+    "main.js": "/ui-generator/static/js/main.c441447f.js",
     "index.html": "/ui-generator/index.html",
     "main.01024420.css.map": "/ui-generator/static/css/main.01024420.css.map",
-    "main.10d1fb90.js.map": "/ui-generator/static/js/main.10d1fb90.js.map"
+    "main.c441447f.js.map": "/ui-generator/static/js/main.c441447f.js.map"
   },
   "entrypoints": [
     "static/css/main.01024420.css",
-    "static/js/main.10d1fb90.js"
+    "static/js/main.c441447f.js"
   ]
 }
