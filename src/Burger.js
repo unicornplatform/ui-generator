@@ -33,10 +33,10 @@ class Burger extends Component {
 			} 
 			>
 			<div className="navigation__description mobile-only">
-						<p>Made by folks from <a className="link" href="https://unicornplatform.com" target="_blank">Unicorn Platform</a>.</p>
+						<p>Made by folks from <a className="link" href="https://unicornplatform.com?ref=ui" target="_blank">Unicorn Platform</a>.</p>
 						<p>Unicorn Platform is a simple landing page builder for startups.</p>
 					</div>
-					<Button target="_blank" className="mobile-only navigation__mobile-menu-button" htmlTag="a" buttonType="ghost" href="https://unicornplatform.com">Try Unicorn Platform for free</Button>
+					<Button target="_blank" className="mobile-only navigation__mobile-menu-button" htmlTag="a" buttonType="ghost" href="https://unicornplatform.com?ref=ui">Try Unicorn Platform for free</Button>
 			</div>
 			</>
 		)

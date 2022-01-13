@@ -1,7 +1,7 @@
 @import 'null.scss';
 
 $c-accent: #4D66F3;
-$c-accent-hover: #3E58DB;
+$c-accent-hover: #293EA8;
 $c-accent-opacity: rgba(77, 102, 243, 0.1);
 $c-accent-background: #F9FBFF;
 $c-neutral-1: #303030;
@@ -290,8 +290,7 @@ body {
 	text-decoration: underline;
 	color: $c-accent;
 	&:hover {
-		opacity: 0.75;
-		text-decoration: underline;
+		opacity: 0.8;
 	}
 	transition: opacity 0.15s ease;
 
@@ -898,6 +897,20 @@ body {
   }
 }
 
+.not-found {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__message-top {
+		font-size: 64px;
+		font-weight: 700;
+		font-family: 'montserrat';
+		line-height: 1em;
+	}
+}
 
 
 
