@@ -48,7 +48,7 @@ class Main extends Component {
 					finishLoading={this.props.finishLoading}
 					/>
 					<Button buttonType="primary" icon htmlTag="a"
-					target="_blank"
+					target="_self"
 					type={this.props.type}
 					category={this.props.category}
 					dark={this.props.dark}
@@ -91,7 +91,7 @@ class Main extends Component {
 					<h2 className="main__share-title h2-title">Share with friends</h2>
 						<div className="main__share-links">
 							<a className="main__twitter share-link" 
-							href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(document.URL)}`}
+							href={`https://twitter.com/intent/tweet?text=I've%20made%20an%20awesome%20UI%20in%20just%20a%20few%20seconds⚡️%20Check%20it%20out:&url=${encodeURIComponent(document.URL)}`}
 							target="popup"
 							onClick={() => {window.open(this.href,'popup','width=600,height=600'); return false;} }
 							>

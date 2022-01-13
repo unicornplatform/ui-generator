@@ -57,7 +57,7 @@ class Sidebar extends Component {
 								<h3 className="sidebar__title h3-title">Share with friends</h3>
 								<div className="sidebar__share-links">
 									<a className="sidebar__twitter share-link" 
-									href={`https://twitter.com/intent/tweet?text=I%20made%20this%20awesome%20UI%20in%20just%20a%20few%20seconds⚡️%20Check%20it%20out%20here:&url=${encodeURIComponent(document.URL)}`}
+									href={`https://twitter.com/intent/tweet?text=I've%20made%20an%20awesome%20UI%20in%20just%20a%20few%20seconds⚡️%20Check%20it%20out:&url=${encodeURIComponent(document.URL)}`}
 									target="popup"
 									onClick={() => {window.open(this.href,'popup','width=600,height=600'); return false;} }
 									>
