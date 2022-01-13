@@ -47,12 +47,14 @@ class Main extends Component {
 					startLoading={this.props.startLoading}
 					finishLoading={this.props.finishLoading}
 					/>
-					<Button buttonType="primary" icon htmlTag="button"
+					<Button buttonType="primary" icon htmlTag="a"
+					target="_blank"
 					type={this.props.type}
 					category={this.props.category}
 					dark={this.props.dark}
 					mockup={this.props.mockup}
 					color={this.props.color}
+					download={true}
 					className="button_download"
 					>
 					Download .png
