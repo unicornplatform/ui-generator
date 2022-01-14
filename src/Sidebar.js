@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Switch from './Switch'
 import Picker from './Picker'
 import Toggle from './Toggle'
+import Tabs from './Tabs'
 
 class Sidebar extends Component {
 	render() {
@@ -22,6 +23,19 @@ class Sidebar extends Component {
 								setType = {this.props.setType}
 								type={this.props.type}
 								/>
+							</div>
+
+							<div className="sidebar__category-box">
+							<h3 className="sidebar__title h3-title">Category</h3>
+								<div className="sidebar__tabs">
+									<Tabs 
+									setCategory={this.props.setCategory}
+									type={this.props.type}
+									category={this.props.category}
+									initialCategory={this.props.category}
+									position="sidebar"
+									/>
+								</div>
 							</div>
 
 							<div className="sidebar__color-picker">

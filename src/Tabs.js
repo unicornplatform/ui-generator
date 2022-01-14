@@ -18,30 +18,30 @@ class Tabs extends Component {
 	render() {
 		return (
 			<div className="tabs">
-				<div className="tabs__container">
-					<Tab onClick={this.changeValue} type={0} selected={this.state.selected} deviceType={this.props.type}>
-					{this.props.type==1 ? "Sign up" : "Dashboard #1"}
+				<div className={"tabs__container tabs__container_" + (this.props.position ? this.props.position : "")}>
+					<Tab onClick={this.changeValue} type={0} selected={this.props.category} deviceType={this.props.type}>
+					{this.props.type==1 ? "Sign\xa0up" : "Dashboard\xa0#1"}
 					</Tab>
-					<Tab onClick={this.changeValue} type={1} selected={this.state.selected} deviceType={this.props.type}>
-					{this.props.type==1 ? "Messenger" : "Dashboard #2"}
+					<Tab onClick={this.changeValue} type={1} selected={this.props.category} deviceType={this.props.type}>
+					{this.props.type==1 ? "Messenger" : "Dashboard\xa0#2"}
 					</Tab>
-					<Tab onClick={this.changeValue} type={2} selected={this.state.selected} deviceType={this.props.type}>
-					{this.props.type==1 ? "Profile" : "Dashboard #3"}
+					<Tab onClick={this.changeValue} type={2} selected={this.props.category} deviceType={this.props.type}>
+					{this.props.type==1 ? "Profile" : "Dashboard\xa0#3"}
 					</Tab>
-					<Tab onClick={this.changeValue} type={3} selected={this.state.selected} deviceType={this.props.type}>
-					{this.props.type==1 ? "Social feed" : "Kanban"}
+					<Tab onClick={this.changeValue} type={3} selected={this.props.category} deviceType={this.props.type}>
+					{this.props.type==1 ? "Social\xa0feed" : "Kanban"}
 					</Tab>
-					<Tab onClick={this.changeValue} type={4} selected={this.state.selected} deviceType={this.props.type}>
+					<Tab onClick={this.changeValue} type={4} selected={this.props.category} deviceType={this.props.type}>
 					{this.props.type==1 ? "Dashboard" : "CRM"}
 					</Tab>
-					<Tab onClick={this.changeValue} type={5} selected={this.state.selected} deviceType={this.props.type}>
-					{this.props.type==1 ? "E-commerce" : "Finance"}
+					<Tab onClick={this.changeValue} type={5} selected={this.props.category} deviceType={this.props.type}>
+					{this.props.type==1 ? "E‑commerce" : "Finance"}
 					</Tab>
-					<Tab onClick={this.changeValue} type={6} selected={this.state.selected} deviceType={this.props.type}>
+					<Tab onClick={this.changeValue} type={6} selected={this.props.category} deviceType={this.props.type}>
 					{this.props.type==1 ? "Finance" : "Calendar"}
 					</Tab>
-					<Tab onClick={this.changeValue} type={7} selected={this.state.selected} deviceType={this.props.type}>
-					{this.props.type==1 ? "Music app" : "Messenger"}
+					<Tab onClick={this.changeValue} type={7} selected={this.props.category} deviceType={this.props.type}>
+					{this.props.type==1 ? "Music\xa0app" : "Messenger"}
 					</Tab>
 				</div>
 			</div>

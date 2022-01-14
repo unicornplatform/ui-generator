@@ -106,6 +106,9 @@ class App extends Component {
 					dark={this.state.dark}
 					mockup={this.state.mockup}
 					color={this.state.color}
+					category={this.state.category}
+
+					setCategory={this.setCategory}
 
 					
 

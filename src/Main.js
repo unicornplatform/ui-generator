@@ -24,12 +24,14 @@ class Main extends Component {
 					/>
 				</div>
 
-				<div className="main__tabs">
+				<div className="main__tabs mobile-only">
 					<h2 className="main__tabs-title h2-title desktop-only">Choose a category</h2>
 					<Tabs 
 					setCategory={this.props.setCategory}
 					type={this.props.type}
+					category={this.props.category}
 					initialCategory={this.props.category}
+					position="main"
 					/>
 				</div>
 
@@ -128,7 +130,7 @@ class Main extends Component {
 					</div>
 
 					<Footer />
-			</div>
+					</div>
 
 		)
 	}
