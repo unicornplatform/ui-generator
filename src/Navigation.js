@@ -14,10 +14,10 @@ class Navigation extends Component {
 						</a>
 					</div>
 					<div className="navigation__description desktop-only">
+						<p>Generate and download mockup UI for your design needs. 100% free.</p>
 						<p>Made by folks from <a className="link" href="https://unicornplatform.com?ref=ui" target="_blank">Unicorn Platform</a>.</p>
-						<p>Unicorn Platform is a simple landing page builder for startups.</p>
 					</div>
-					<Button target="_blank" className="desktop-only" htmlTag="a" buttonType="ghost" href="https://unicornplatform.com?ref=ui">Try Unicorn Platform for free</Button>
+					<Button target="_blank" className="desktop-only button_ph" htmlTag="a" buttonType="primary" href="https://producthunt.com">Support us on Product Hunt 😻</Button>
 					<Burger className="mobile-only" />
 				</div>
 				

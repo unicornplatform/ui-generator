@@ -9,10 +9,14 @@ class Sidebar extends Component {
 		return (
 			<div className="sidebar">
 					<div className="sidebar__logo-box">
-						<a className="sidebar__logo-link" href="/" target="_self">
+						<a className="sidebar__logo-link sidebar-only" href="/" target="_self">
 							<img className="sidebar__logo" src="logo.svg" alt="" />
 							<span className="sidebar__name">UI Generator</span>
 						</a>
+						<div className="sidebar__description">
+							<p>Generate and download mockup UI for your design needs. 100% free.</p>
+							<p>Made by folks from <a className="link" href="https://unicornplatform.com?ref=ui" target="_blank">Unicorn Platform</a>.</p>
+						</div>
 					</div>
 
 						<div className="sidebar__options-wrapper">

@@ -268,6 +268,17 @@ body {
 			border-color: #000;
 		}
 	}
+	&_ph {
+		background-color: #DA552F;
+		border-color: #DA552F;
+		min-width: 247px;
+		&:hover {
+			background-color: #FF4400;
+			border-color: #FF4400;
+			box-shadow: 0px 2px 4px rgba(255, 68, 0, 0.16), 0px 6px 12px rgba(255, 68, 0, 0.25);
+			transform: translateY(-3px);
+		}
+	}
 	&_download {
 		
 		//@media (max-width: $br-desktop) {
@@ -342,7 +353,7 @@ body {
 			}
 		}
 
-		padding: 128px 16px 0;
+		padding: 100px 16px 0;
 		text-align: center;
 		position: fixed;
 		width: 100%;
@@ -422,10 +433,16 @@ body {
 	height: 100%;
 	overflow: auto;
 	&__container {}
-
+	&__description {
+		color: $c-neutral-2;
+		@extend %ts-description;
+		p:first-child {
+			margin-bottom: 8px;
+		}
+	}
 	&__logo-box {
 		padding: 28px 24px;
-		user-select: none;
+		//user-select: none;
 		z-index: 110;
 		line-height: 0;
 		@media (max-width: $br-desktop) {
@@ -441,6 +458,9 @@ body {
 			opacity: 0.70;
 		}
 		transition: opacity 0.2s ease;
+		&.sidebar-only {
+			margin-bottom: 12px;
+		}
 	}
 	&__name {
 		@extend %ts-logo;
@@ -721,9 +741,9 @@ body {
 	&:after {
 		bottom: 0;
 	}
-	&:hover {
-		opacity: 0.6;
-	}
+	// &:hover {
+	// 	opacity: 0.6;
+	// }
 	&.js-active span {
 		transform: scaleX(0) translateX(-50%);
 	}
@@ -915,6 +935,8 @@ body {
   }
 }
 
+//FOR PH LAUNCH v
+
 .not-found {
 	&__container {
 		display: flex;
@@ -930,10 +952,23 @@ body {
 	}
 }
 
+.navigation {
+	@media (min-width: $br-desktop + 1) {
+		display: none;
+	}
+}
+	.button_ph {
+		display: none;
+	}
 
-
-
-
+// .sidebar {
+// 	&__description {
+// 		display: none;
+// 	}
+// 	&__logo-link {
+// 		margin-bottom: 0;
+// 	}
+// }
 
 
 
