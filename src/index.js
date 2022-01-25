@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 // import NotFound from './NotFound'
 // import {
 // 	BrowserRouter,
@@ -16,9 +16,8 @@ import App from './App'
 // 			<Route path="*" element={<NotFound />}></Route>
 // 		</Routes>
 // 	</HashRouter>
-	
-	
+
 // 	, document.getElementById('root')
 // )
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById("root"));
