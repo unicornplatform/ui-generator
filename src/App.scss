@@ -113,7 +113,7 @@ body {
     margin-bottom: 40px;
   }
   &__result {
-    padding: 64px;
+    padding: 32px 64px 64px;
     background-color: $c-accent-background;
 
     border-bottom: 1px solid #e8ebed;
@@ -223,6 +223,16 @@ body {
     &.js-is-loading {
       opacity: 0.5;
     }
+  }
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+  }
+  &__subtitle {
+    line-height: 1.5em;
+    text-align: center;
   }
   max-width: 100%;
   @media (max-width: $br-desktop) {
@@ -443,11 +453,11 @@ body {
     color: $c-neutral-2;
     @extend %ts-description;
     p:first-child {
-      margin-bottom: 8px;
+      //margin-bottom: 8px;
     }
   }
   &__logo-box {
-    padding: 28px 24px;
+    padding: 28px 24px 16px;
     //user-select: none;
     z-index: 110;
     line-height: 0;
@@ -716,7 +726,7 @@ body {
 }
 
 // .no-shadow {
-// 	box-shadow: none;
+//  box-shadow: none;
 // }
 
 .burger {
@@ -750,7 +760,7 @@ body {
     bottom: 0;
   }
   // &:hover {
-  // 	opacity: 0.6;
+  //  opacity: 0.6;
   // }
   &.js-active span {
     transform: scaleX(0) translateX(-50%);
@@ -944,37 +954,37 @@ body {
 
 //FOR PH LAUNCH v
 
-.not-found {
-  &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  &__message-top {
-    font-size: 64px;
-    font-weight: 700;
-    font-family: "montserrat";
-    line-height: 1em;
-  }
-}
+// .not-found {
+//   &__container {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//   }
+//   &__message-top {
+//     font-size: 64px;
+//     font-weight: 700;
+//     font-family: "montserrat";
+//     line-height: 1em;
+//   }
+// }
 
-.navigation {
-  @media (min-width: $br-desktop + 1) {
-    display: none;
-  }
-}
-.button_ph {
-  display: none;
-}
+// .navigation {
+//   @media (min-width: $br-desktop + 1) {
+//     display: none;
+//   }
+// }
+// .button_ph {
+//   display: none;
+// }
 
 // .sidebar {
-// 	&__description {
-// 		display: none;
-// 	}
-// 	&__logo-link {
-// 		margin-bottom: 0;
-// 	}
+//  &__description {
+//    display: none;
+//  }
+//  &__logo-link {
+//    margin-bottom: 0;
+//  }
 // }
 
 #root .tooltip-custom {
@@ -996,21 +1006,21 @@ body {
 }
 
 .category {
-	&__wrapper {
-		line-height: 16px;
-		.h3-title {
-			margin-bottom: 0;
-			padding-right: 4px;
-		}
-	margin-bottom: 24px;
-	display: flex;
-	align-items: baseline;
-	}
-	&__subtitle {
-		@extend %ts-description;
-		color: $c-neutral-2;
-		line-height: 1em;
-	}
+  &__wrapper {
+    line-height: 16px;
+    .h3-title {
+      margin-bottom: 0;
+      padding-right: 4px;
+    }
+    margin-bottom: 24px;
+    display: flex;
+    align-items: baseline;
+  }
+  &__subtitle {
+    @extend %ts-description;
+    color: $c-neutral-2;
+    line-height: 1em;
+  }
 }
 
 .download-wrapper {
@@ -1018,17 +1028,50 @@ body {
   width: 299px;
   display: flex;
   justify-content: center;
-  padding: 32px 24px;
+  padding: 16px 24px;
   position: fixed;
   bottom: 0;
   left: 0;
   background-color: white;
   border-top: 1px solid #e8ebed;
-  //box-shadow: 0 -80px 0 0 #000000;
-  box-shadow: 0 -22px 14px -16px rgb(255 255 255), 0 -80px 24px -20px rgb(255 255 255 / 65%), 0 -38px 14px -16px rgb(255 255 255 / 75%);
-
-
+  box-shadow: 0 -22px 14px -16px rgb(255 255 255),
+    0 -80px 24px -20px rgb(255 255 255 / 65%),
+    0 -38px 14px -16px rgb(255 255 255 / 75%);
 }
+
+.banner {
+
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px 24px;
+  @extend %ts-button;
+  //text-decoration: underline;
+  color: white;
+  background-color: #da552f;
+   &:hover {
+      background-color: #ff4400;
+      box-shadow: 0px 2px 4px rgba(255, 68, 0, 0.16),
+        0px 6px 12px rgba(255, 68, 0, 0.25);
+        .banner__text {
+          transform: translateY(-3px);
+        }
+    }
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    display: none;
+}
+.banner__text {
+  transition: transform 0.2s ease;
+}
+
+
+
+
+
+
+
+
 
 
 

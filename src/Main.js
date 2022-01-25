@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Navigation from "./Navigation";
+//import Navigation from "./Navigation";
 import Tabs from "./Tabs";
 import Button from "./Button";
 import Image from "./Image";
@@ -9,12 +9,14 @@ import Picker from "./Picker";
 import Testimonial from "./Testimonial";
 import Footer from "./Footer";
 import Spinner from "./Spinner";
+import Banner from "./Banner";
 
 class Main extends Component {
   render() {
     return (
       <div className="main">
-        <Navigation />
+        {/*<Navigation />*/}
+        <Banner />
         <div className="main__type mobile-only">
           <h2 className="main__type-title h2-title">Select UI type</h2>
           <Switch setType={this.props.setType} type={this.props.type} />
@@ -34,11 +36,16 @@ class Main extends Component {
         </div>
 
         <div className="main__result">
-          <div className="main__title-container">
-            <h2 className="main__result-title h2-title js-result-title">
-              Result
-            </h2>
-            <Spinner />
+          <div className="main__text-content">
+            <div className="main__title-container">
+              <h2 className="main__result-title h2-title js-result-title">
+                Result
+              </h2>
+              <Spinner />
+            </div>
+            <div className="main__subtitle">
+            Generate and download mockup UI for your design needs. <b>100%&nbsp;free.</b>
+            </div>
           </div>
           <Image
             type={this.props.type}

@@ -30,15 +30,16 @@ class Sidebar extends Component {
 						<span className="sidebar__name">UI Generator</span>
 					</a>
 					<div className="sidebar__description">
-						<p>
+{/*						<p>
 							Generate and download mockup UI for your design needs. 100% free.
-						</p>
+						</p>*/}
 						<p>
-							Made by folks from{" "}
+							By{" "}
 							<a
 								className="link"
 								href="https://unicornplatform.com?ref=ui"
 								target="_blank"
+								style={{textDecoration: "none",}}
 							>
 								Unicorn Platform
 							</a>
