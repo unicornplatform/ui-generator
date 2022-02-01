@@ -1136,6 +1136,8 @@ body {
   padding: 4px 16px;
   transition: opacity 0.15s ease;
   background-color: $c-neutral-1;
+  //position: relative;
+  z-index: 9999;
 
   &:after {
     border-top-color: $c-neutral-1;

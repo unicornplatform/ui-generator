@@ -21,7 +21,7 @@ class Main extends Component {
                     <div className="main__text-content">
                         <h2 className="main__type-title h2-title">Generate and Download<br/>Mockup UI</h2>
                         <div className="main__subtitle">
-                            Create mockup (fake) UI for your <span data-tip="123">landing page</span>, prototype,
+                            Create mockup (fake) UI for your <span>landing page</span>, prototype,
                             presentation, or App Store page.
                             Download free PNG files.
                         </div>
@@ -51,7 +51,7 @@ class Main extends Component {
                             <Spinner/>
                         </div>
                         <div className="main__subtitle">
-                            Create mockup (fake) UI for your <span data-tip="123">landing page</span>, prototype,
+                            Create mockup (fake) UI for your <span>landing page</span>, prototype,
                             presentation, or App Store page.
                             Download free PNG files.
                         </div>
