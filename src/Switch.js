@@ -12,7 +12,9 @@ class SwitchButton extends Component {
           "switch__button " +
           (this.props.selected == this.props.i
             ? "switch__button_selected "
-            : "")
+            : "") +
+            " " +
+            (this.props.className ? this.props.className : "")
         }
       >
         {this.props.children || "Desktop"}
