@@ -50,13 +50,13 @@ class Tab extends Component {
           {this.iconsDesktop[this.props.type]}
         </span>
                 <span className="tabs__text">{this.props.children}</span>
-                <ReactTooltip
-                    className="tooltip-custom"
-                    content={this.props.children}
-                    place="top"
-                    type="dark"
-                    effect="solid"
-                ></ReactTooltip>
+                {/*<ReactTooltip*/}
+                {/*    className="tooltip-custom"*/}
+                {/*    content={this.props.children}*/}
+                {/*    place="top"*/}
+                {/*    type="dark"*/}
+                {/*    effect="solid"*/}
+                {/*/>*/}
             </div>
         );
     }

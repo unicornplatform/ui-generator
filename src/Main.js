@@ -9,7 +9,6 @@ import Testimonial from "./Testimonial";
 import Footer from "./Footer";
 import Spinner from "./Spinner";
 import Banner from "./Banner";
-import ReactTooltip from "react-tooltip";
 
 class Main extends Component {
     render() {
@@ -21,8 +20,8 @@ class Main extends Component {
                     <div className="main__text-content">
                         <h2 className="main__type-title h2-title">Generate and Download<br/>Mockup UI</h2>
                         <div className="main__subtitle">
-                            Create mockup (fake) UI for your <span>landing page</span>, prototype,
-                            presentation, or App Store page.
+                            Create mockup (fake) UI for your landing page, prototype,
+                            presentation, or blog post.
                             Download free PNG files.
                         </div>
                     </div>
@@ -51,8 +50,31 @@ class Main extends Component {
                             <Spinner/>
                         </div>
                         <div className="main__subtitle">
-                            Create mockup (fake) UI for your <span>landing page</span>, prototype,
-                            presentation, or App Store page.
+                            Create mockup (fake) UI for your <span data-html={true}
+                                                                   data-tip={"<img class='tooltip-custom__picture' src='uc1.png' alt='Use case 1'/>"}
+                                                                   data-class={"tooltip-custom_image"}
+                                                                   data-type={"dark"}
+                                                                   className={"hover-info"}
+                                                                   data-place={"bottom"}>landing page</span>,{" "}
+                            <span data-html={true}
+                                  data-tip={"<img class='tooltip-custom__picture' src='uc2.png' alt='Use case 2'/>"}
+                                  data-class={"tooltip-custom_image"}
+                                  data-type={"dark"}
+                                  className={"hover-info"}
+                                  data-place={"bottom"}>prototype</span>,{" "}
+                            <span data-html={true}
+                                  data-tip={"<img class='tooltip-custom__picture' src='uc3.png' alt='Use case 3'/>"}
+                                  data-class={"tooltip-custom_image"}
+                                  data-type={"dark"}
+                                  className={"hover-info"}
+                                  data-place={"bottom"}>presentation</span>
+
+                            , or <span data-html={true}
+                                       data-tip={"<img class='tooltip-custom__picture' src='uc4.png' alt='Use case 4'/>"}
+                                       data-class={"tooltip-custom_image"}
+                                       data-type={"dark"}
+                                       className={"hover-info"}
+                                       data-place={"bottom"}>blog post</span>.
                             Download free PNG files.
                         </div>
                     </div>
@@ -186,7 +208,8 @@ class Main extends Component {
 
                 <Footer/>
             </div>
-        );
+        )
+            ;
     }
 }
 

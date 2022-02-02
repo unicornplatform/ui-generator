@@ -151,6 +151,8 @@ body {
   &__type {
     padding-top: 48px;
     padding-bottom: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -272,6 +274,9 @@ body {
   &__switch {
     width: 100%;
     max-width: 400px;
+    @media (max-width: $br-mobile) {
+      max-width: none;
+    }
   }
 
   max-width: 100%;
@@ -1144,12 +1149,38 @@ body {
   }
 
   &.show {
-    opacity: 0.28;
+    opacity: 0.9;
+  }
+
+  &_image {
+    //box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.0534177),
+    //0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0767396),
+    //0px 22.3363px 17.869px rgba(0, 0, 0, 0.095),
+    //0px 12.5216px 10.0172px rgba(0, 0, 0, 0.11326),
+    //0px 6.6501px 5.32008px rgba(0, 0, 0, 0.136582),
+    //0px 2.76726px 2.21381px rgba(0, 0, 0, 0.19);
+
+    box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.25), 0px 18px 88px rgba(0, 0, 0, 0.2);
+
+    transition: opacity 0.15s ease;
+    padding: 8px;
+    min-width: 416px;
+    text-align: center;
+    //border-radius: 4px;
+
+    &.show {
+      opacity: 1 !important;
+    }
+  }
+
+  &__picture {
+    //border-radius: 4px;
   }
 
   @media (max-width: $br-desktop) {
     display: none;
   }
+
 }
 
 .category {
@@ -1219,6 +1250,10 @@ body {
   //transition: transform 0.2s ease;
 }
 
+.hover-info {
+  text-decoration: underline;
+  cursor: help;
+}
 
 
 
