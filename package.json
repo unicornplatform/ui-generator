@@ -2,7 +2,7 @@
   "name": "ui-generator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://uigenerator.org",
+  "homepage": "https://crowfoody.github.io/test-ui-generator/",
   "dependencies": {
     "@material/tooltip": "^13.0.0",
     "@testing-library/jest-dom": "^5.16.1",
