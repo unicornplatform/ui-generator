@@ -92,6 +92,7 @@ class App extends Component {
     render() {
         return (
             <div className="wrapper">
+                <liveweb-widget site="3"/>
                 <ReactTooltip
                     className="tooltip-custom"
                     content={this.props.children}
