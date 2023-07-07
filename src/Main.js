@@ -15,7 +15,7 @@ class Main extends Component {
         return (
             <div className="main">
                 {/*<Navigation />*/}
-                <Banner/>
+                {/* <Banner/> */}
                 <div className="main__type mobile-only">
                     <div className="main__text-content">
                         <h2 className="main__type-title h2-title">Generate and Download<br/>Mockup UI</h2>
